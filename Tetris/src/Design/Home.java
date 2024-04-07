@@ -2,10 +2,13 @@ package Design;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
 
 public class Home extends JFrame {
 
@@ -32,11 +35,19 @@ public class Home extends JFrame {
 	 */
 	public Home() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		
+		NameGame();
 	}
-
+	//Ten game
+	public void NameGame(){
+		contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		JLabel lblTetris = new JLabel("TETRIS");
+		lblTetris.setFont(new Font("Snap ITC", Font.PLAIN, 64));
+		lblTetris.setBounds(267, 16, 296, 72);
+		getContentPane().add(lblTetris);
+	}
 }
