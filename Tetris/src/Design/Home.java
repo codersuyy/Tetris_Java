@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Home extends JFrame {
 
@@ -36,8 +38,15 @@ public class Home extends JFrame {
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		NameGame();
 	}
-
+	public void NameGame(){
+		JLabel lblTetris = new JLabel("TETRIS");
+		lblTetris.setFont(new Font("Snap ITC", Font.PLAIN, 64));
+		lblTetris.setBounds(151, 16, 317, 83);
+		contentPane.add(lblTetris);
+	}
 }
