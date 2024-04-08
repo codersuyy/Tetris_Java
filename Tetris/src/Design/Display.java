@@ -1,11 +1,7 @@
 package Design;
 
-import java.awt.Color;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
 public class Display {
 	public static void main(String[] args) {
@@ -21,7 +17,7 @@ public class Display {
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					frame.setBounds(20, 20, 500, 660);
 					frame.setResizable(false);
-					frame.setContentPane(hiscore);
+					frame.setContentPane(home);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
