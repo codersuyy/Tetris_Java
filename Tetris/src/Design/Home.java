@@ -11,6 +11,13 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 public class Home extends JPanel{
+	private static final long serialVersionUID = 1L;
+	
+	public JLabel lblTetris = new JLabel("TETRIS");
+	public JLabel lblPlay = new JLabel("PLAY");
+	public JLabel lblInstruction = new JLabel("INSTRUCTION");
+	public JLabel lblHighscore = new JLabel("HIGHSCORE");
+	
 	public Home() {
 		setBackground(Color.BLACK);
 		setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -22,7 +29,6 @@ public class Home extends JPanel{
 	}
 
 	public void NameGame(){
-		JLabel lblTetris = new JLabel("TETRIS");
 		lblTetris.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTetris.setForeground(new Color(255, 255, 255));
 		lblTetris.setFont(new Font("Bookman Old Style", Font.BOLD, 60));
@@ -30,7 +36,6 @@ public class Home extends JPanel{
 		add(lblTetris);
 	}
 	public void ButtonPlay(){
-		JLabel lblPlay = new JLabel("PLAY");
 		lblPlay.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseExited(MouseEvent e) {
@@ -51,7 +56,6 @@ public class Home extends JPanel{
 		add(lblPlay);
 	}
 	public void ButtonInstruction(){
-		JLabel lblInstruction = new JLabel("INSTRUCTION");
 		lblInstruction.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseExited(MouseEvent e) {
@@ -71,7 +75,6 @@ public class Home extends JPanel{
 		add(lblInstruction);
 	}
 	public void ButtonHighscore(){
-		JLabel lblHighscore = new JLabel("HIGHSCORE");
 		lblHighscore.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseExited(MouseEvent e) {
