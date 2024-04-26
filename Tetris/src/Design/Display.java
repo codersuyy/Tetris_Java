@@ -18,7 +18,7 @@ public class Display {
 					frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\ADMIN\\git\\Tetris_Java\\Tetris\\img\\logo.png"));
 					frame.setTitle("Tetris");
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-					frame.setBounds(20, 20, 500, 660);
+					frame.setBounds(20, 20, 665, 660);
 					frame.setResizable(false);
 					frame.setContentPane(play);
 					play.setLevel("99");
