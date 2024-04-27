@@ -20,7 +20,7 @@ public class Display {
 					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					frame.setBounds(20, 20, 655, 660);
 					frame.setResizable(false);
-					frame.setContentPane(play);
+					frame.setContentPane(ins);
 					play.setLevel("99");
 					frame.setVisible(true);
 					
