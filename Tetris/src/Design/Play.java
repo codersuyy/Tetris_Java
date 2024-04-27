@@ -28,8 +28,15 @@ public class Play extends JPanel{
 		setBackground(Color.BLACK);
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
-		setBounds(20, 20, 665, 633);
-		
+		setBounds(20, 20, 655, 633);
+		this.Hold();
+		this.PlayA();
+		this.Next();
+		this.Score();
+		this.Level();
+	}
+	
+	public void Hold(){
 		border3.setBounds(10, 50, 124, 304);
 		add(border3);
 		border3.setLayout(null);
@@ -43,7 +50,9 @@ public class Play extends JPanel{
 		lblHold.setFont(new Font("Bookman Old Style", Font.BOLD, 30));
 		lblHold.setBounds(10, 20, 124, 25);
 		add(lblHold);
-		
+	}
+	
+	public void PlayA(){
 		border.setBackground(Color.WHITE);
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		border.setBounds(165, 10, 304, 604);
@@ -54,7 +63,9 @@ public class Play extends JPanel{
 		Playarea.setBounds(2, 2, 300, 600);
 		border.add(Playarea);
 		Playarea.setLayout(null);
-		
+	}
+	
+	public void Next(){
 		border2.setBounds(500, 50, 124, 304);
 		add(border2);
 		border2.setLayout(null);
@@ -69,7 +80,9 @@ public class Play extends JPanel{
 		lblNext.setFont(new Font("Bookman Old Style", Font.BOLD, 30));
 		lblNext.setBounds(500, 20, 124, 25);
 		add(lblNext);
-		
+	}
+	
+	public void Score(){
 		lblScore.setHorizontalAlignment(SwingConstants.CENTER);
 		lblScore.setForeground(Color.WHITE);
 		lblScore.setFont(new Font("Bookman Old Style", Font.BOLD, 30));
@@ -81,13 +94,16 @@ public class Play extends JPanel{
 		lblDiem.setFont(new Font("Bookman Old Style", Font.BOLD, 25));
 		lblDiem.setBounds(500, 440, 124, 20);
 		add(lblDiem);
-		
+	}
+	
+	public void Level(){
 		lblLevel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLevel.setForeground(Color.WHITE);
 		lblLevel.setFont(new Font("Bookman Old Style", Font.BOLD, 30));
 		lblLevel.setBounds(500, 500, 124, 30);
 		add(lblLevel);
 	}
+	
 	public void setLevel(String lvl){
 		lblLevel.setText("Level: "+lvl);
 	}
