@@ -17,8 +17,10 @@ public class Instruction extends JPanel{
 		
 		txtrIn.setForeground(Color.WHITE);
 		txtrIn.setBackground(Color.BLACK);
+		txtrIn.setLineWrap(true);
+		txtrIn.setWrapStyleWord(true);
 		txtrIn.setText("In Tetris, players complete lines by moving differently shaped pieces (tetrominoes), which descend onto the playing field. The completed lines disappear and grant the player points, and the player can proceed to fill the vacated spaces. The game ends when the uncleared lines reach the top of the playing field.");
-		txtrIn.setBounds(10, 11, 430, 278);
+		txtrIn.setBounds((655-430)/2, 11, 430, 278);
 		add(txtrIn);
 	}
 }
