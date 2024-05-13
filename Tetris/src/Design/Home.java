@@ -1,28 +1,32 @@
 package Design;
 
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import java.awt.Font;
 import java.awt.Color;
-import javax.swing.SwingConstants;
+import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
 public class Home extends JPanel{
 	private static final long serialVersionUID = 1L;
+	private JFrame mainFrame;
 	
 	public JLabel lblTetris = new JLabel("TETRIS");
 	public JLabel lblPlay = new JLabel("PLAY");
 	public JLabel lblInstruction = new JLabel("INSTRUCTION");
 	public JLabel lblHighscore = new JLabel("HIGHSCORE");
 	
-	public Home() {
+	public Home(JFrame frame) {
 		setBackground(Color.BLACK);
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setLayout(null);
 		NameGame();
+		this.mainFrame = frame;
 		ButtonPlay();
 		ButtonInstruction();
 		ButtonHighscore();
@@ -38,6 +42,14 @@ public class Home extends JPanel{
 	
 	public void ButtonPlay(){
 		lblPlay.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e){
+				Play pl = new Play();
+				mainFrame.setContentPane(pl);
+				pl.setLevel("1");
+				mainFrame.revalidate();  // Tells the layout manager to reset based on the new content pane
+				mainFrame.repaint();  // Redraws the frame so the new content pane is displayed
+			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				lblPlay.setForeground(Color.WHITE);
@@ -60,6 +72,13 @@ public class Home extends JPanel{
 	public void ButtonInstruction(){
 		lblInstruction.addMouseListener(new MouseAdapter() {
 			@Override
+			public void mouseClicked(MouseEvent e){
+				Instruction in = new Instruction();
+				mainFrame.setContentPane(in);
+				mainFrame.revalidate();
+				mainFrame.repaint();
+			}
+			@Override
 			public void mouseExited(MouseEvent e) {
 				lblInstruction.setForeground(Color.WHITE);
 			}
@@ -79,6 +98,13 @@ public class Home extends JPanel{
 	
 	public void ButtonHighscore(){
 		lblHighscore.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e){
+				Highscore high = new Highscore();
+				mainFrame.setContentPane(high);
+				mainFrame.revalidate();
+				mainFrame.repaint();
+			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				lblHighscore.setForeground(Color.WHITE);
